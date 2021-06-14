@@ -1,5 +1,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
+const Manager = require('./lib/Manager.js');
+const Engineer = require('./lib/Engineer.js');
+const Intern = require('./lib/Intern.js');
 
 let addMember = true
 let teamLeader
@@ -77,11 +80,11 @@ const add_team_questions = [
     }
 ]
 
-async function getData() {
+async function getInquirer() {
     await inquirer
         .prompt(leader_questions)
         .then(async (response) => {
-            teamLeader = response
+            teamLeader = new Manager(response.name, response.id, response.email, response.office)
             while (addMember) {
                 await inquirer.prompt(add_team_questions)
                     .then(async (response) => {
@@ -90,12 +93,14 @@ async function getData() {
                         } else if (response.choices === "engineer") {
                             await inquirer.prompt(engineer_questions)
                             .then(async(response) => {
-                                engineerTeam.push(response)
+                                let engineer = new Engineer(response.name, response.id, response.email, response.github)
+                                engineerTeam.push(engineer)
                             })
                         } else if (response.choices === "intern") {
                             await inquirer.prompt(intern_questions)
                             .then(async(response) => {
-                                internTeam.push(response)
+                                let intern = new Intern(response.name, response.id, response.email, response.school)
+                                internTeam.push(intern)
                             })
                         }
                     })
@@ -114,15 +119,16 @@ function createHTMLFile() {
     fs.writeFile("index.html",htmlStr, (err) => err ? console.error(err) : console.log("File Generated"))
 }
 
-getData();
+getInquirer();
 
 
 
 // HAVE DONE
 // write file command
 // inquirer prompts
+// classes
+// tests
+
 // TO DO
 // basic layout of html file
 // figure out a way to dynamicaally add cards
-// classes
-// tests
