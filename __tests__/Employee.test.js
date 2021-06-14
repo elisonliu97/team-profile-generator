@@ -3,7 +3,7 @@ const Employee = require ('../lib/Employee.js');
 
 describe('Employee', () => {
     describe('Initialization', () => {
-        it("should create an object with a name, id number, and email", () => {
+        it("should create an Employee object with a name, id number, and email", () => {
             const employee = new Employee("Bob", 3, "bob@bob.com");
 
             expect(employee.name).toEqual("Bob");
@@ -32,7 +32,7 @@ describe('Employee', () => {
         it("should get the employee's email", () => {
             const employee = new Employee("Bob", 3, "bob@bob.com");
             
-            expect(employee.getEmail()).toEqual("bob@bob.com")
+            expect(employee.getEmail()).toEqual("bob@bob.com");
         })
     })
     
@@ -40,7 +40,7 @@ describe('Employee', () => {
         it("should get the employee's role", () => {
             const employee = new Employee("Bob", 3, "bob@bob.com");
 
-            expect(employee.getRole()).toEqual("Employee")
+            expect(employee.getRole()).toEqual("Employee");
         })
     })
 })
