@@ -18,6 +18,8 @@
   Enter information as the prompts require.
   - [Demo](https://drive.google.com/file/d/1NAwGkCYa_rNE3tM1YA-ntZTTrEiGwdOT/view)
   - [Sample Generated Page](./dist/index.html)
+  ![image](https://user-images.githubusercontent.com/28275237/122112032-65dfac00-cdee-11eb-9b70-e13a4daff54c.png)
+
 
   ## Tests
   There are tests included inthe __tests__ folder.
