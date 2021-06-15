@@ -1,3 +1,4 @@
+// function to create cards for manager
 function generateManagerCard(manager) {
     return `<div class="column is-one-quarter-desktop">
     <div class="card">
@@ -22,6 +23,7 @@ function generateManagerCard(manager) {
     </div>`
 }
 
+// function to create cards for engineers
 function generateEngineerCard(engineer) {
     return `<div class="column is-one-quarter-desktop">
     <div class="card">
@@ -46,6 +48,7 @@ function generateEngineerCard(engineer) {
     </div>`
 }
 
+// function to create cards for interns
 function generateInternCard(intern) {
     return `<div class="column is-one-quarter-desktop">
     <div class="card">
@@ -71,6 +74,7 @@ function generateInternCard(intern) {
 
 }
 
+// function to generate block of code for cards for all team members
 function generateTeam(manager, listofEngineers, listofInterns) {
     allCards = '';
     allCards += generateManagerCard(manager);
@@ -83,6 +87,7 @@ function generateTeam(manager, listofEngineers, listofInterns) {
     return allCards
 }
 
+// function to generate rest of the html file
 function generateHTML(manager, listofEngineers, listofInterns) {
     return `<!DOCTYPE html>
 <html lang="en">

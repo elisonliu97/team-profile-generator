@@ -1,3 +1,4 @@
+// INQUIRER LEADER QUESTIONS
 const leader_questions = [
     {
         name: "name",
@@ -21,6 +22,7 @@ const leader_questions = [
     },
 ]
 
+// INQUIRER ENGINEER QUESTIONS
 const engineer_questions = [
     {
         name: "name",
@@ -40,6 +42,7 @@ const engineer_questions = [
     }
 ]
 
+//  INQUIRER INTERN QUESTIONS
 const intern_questions = [
     {
         name: "name",
@@ -59,6 +62,7 @@ const intern_questions = [
     }
 ]
 
+//  INQUIRER ADD NEW MEMBERS QUESTIONS
 const add_team_questions = [
     {
         name: "choices",
