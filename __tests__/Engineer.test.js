@@ -25,7 +25,7 @@ describe('Engineer', () => {
         it("should get the engineer's id", () => {
             const engineer = new Engineer("Bob", 3, "bob@bob.com", "bobgit");
 
-            expect(engineer.getId()).toEqual(3);
+            expect(engineer.getID()).toEqual(3);
         })
     })
 
