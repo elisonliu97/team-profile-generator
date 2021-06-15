@@ -13,9 +13,9 @@ function generateManagerCard(manager) {
             </div>
     
             <div class="content">
-                <p><span class="has-text-weight-bold">ID:</span> ${manager.getID()}<br />
-                <span class="has-text-weight-bold">Email:</span> ${manager.getEmail()}<br />
-                <span class="has-text-weight-bold">Office Number:</span>${manager.getOfficeNumber()}</p>
+                <p><span class="has-text-weight-bold">ID:</span> ${manager.getID()}</p>
+                <p><span class="has-text-weight-bold">Email:</span> ${manager.getEmail()}</p>
+                <p><span class="has-text-weight-bold">Office Number:</span> ${manager.getOfficeNumber()}</p>
             </div>
         </div>
     </div>
@@ -37,9 +37,9 @@ function generateEngineerCard(engineer) {
             </div>
     
             <div class="content">
-                <p><span class="has-text-weight-bold">ID:</span> ${engineer.getID()}<br />
-                <span class="has-text-weight-bold">Email:</span> ${engineer.getEmail()}<br />
-                <span class="has-text-weight-bold">GitHub:</span>${engineer.getGithub()}</p>
+                <p><span class="has-text-weight-bold">ID:</span> ${engineer.getID()}</p>
+                <p><span class="has-text-weight-bold">Email:</span> ${engineer.getEmail()}</p>
+                <p><span class="has-text-weight-bold">GitHub:</span> ${engineer.getGithub()}</p>
             </div>
         </div>
     </div>
@@ -61,9 +61,9 @@ function generateInternCard(intern) {
             </div>
     
             <div class="content">
-                <p><span class="has-text-weight-bold">ID:</span> ${intern.getID()}<br />
-                <span class="has-text-weight-bold">Email:</span> ${intern.getEmail()}<br />
-                <span class="has-text-weight-bold">School:</span> ${intern.getSchool()}</p>
+                <p><span class="has-text-weight-bold">ID:</span> ${intern.getID()}</p>
+                <p><span class="has-text-weight-bold">Email:</span> ${intern.getEmail()}</p>
+                <p><span class="has-text-weight-bold">School:</span> ${intern.getSchool()}</p>
             </div>
         </div>
     </div>
@@ -81,7 +81,6 @@ function generateTeam(manager, listofEngineers, listofInterns) {
         allCards += generateInternCard(intern);
     })
     return allCards
-
 }
 
 function generateHTML(manager, listofEngineers, listofInterns) {
@@ -92,11 +91,11 @@ function generateHTML(manager, listofEngineers, listofInterns) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My Team Profile</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.2/css/bulma.min.css" />
 </head>
 <body>
-    <section class="hero is-primary is-bold">
+    <section class="hero is-link">
         <div class="hero-body">
             <div class="container">
                 <h1 class="title">My Team</h1>

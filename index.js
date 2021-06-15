@@ -38,10 +38,6 @@ async function getInquirer() {
                     })
             }
         })
-    
-    console.log(teamLeader)
-    console.log(engineerTeam)
-    console.log(internTeam)
 }
 
 function createHTMLFile(htmlStr) {
