@@ -3,6 +3,7 @@ const fs = require("fs");
 const Manager = require('./lib/Manager.js');
 const Engineer = require('./lib/Engineer.js');
 const Intern = require('./lib/Intern.js');
+const generateHTML = require('./src/template.js')
 const questions = require('./src/questions.js')
 
 let addMember = true
@@ -43,15 +44,18 @@ async function getInquirer() {
     console.log(internTeam)
 }
 
-
-
-
-function createHTMLFile() {
-    fs.writeFile("index.html",htmlStr, (err) => err ? console.error(err) : console.log("File Generated"))
+function createHTMLFile(htmlStr) {
+    fs.writeFile("./dist/index.html",htmlStr, (err) => err ? console.error(err) : console.log("File Generated"))
 }
 
-getInquirer();
+async function init() {
+    await getInquirer();
+    const htmlStr = generateHTML(teamLeader, engineerTeam, internTeam);
+    createHTMLFile(htmlStr);
 
+}
+
+init();
 
 
 // HAVE DONE
