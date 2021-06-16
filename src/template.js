@@ -41,7 +41,7 @@ function generateEngineerCard(engineer) {
             <div class="content">
                 <p><span class="has-text-weight-bold">ID:</span> ${engineer.getID()}</p>
                 <p><span class="has-text-weight-bold">Email:</span> ${engineer.getEmail()}</p>
-                <p><span class="has-text-weight-bold">GitHub:</span> ${engineer.getGithub()}</p>
+                <p><span class="has-text-weight-bold">GitHub:</span><a href="https://github.com/${engineer.getGithub()}> ${engineer.getGithub()}</a></p>
             </div>
         </div>
     </div>
