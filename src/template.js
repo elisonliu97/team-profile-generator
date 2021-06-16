@@ -15,7 +15,7 @@ function generateManagerCard(manager) {
     
             <div class="content">
                 <p><span class="has-text-weight-bold">ID:</span> ${manager.getID()}</p>
-                <p><span class="has-text-weight-bold">Email:</span> ${manager.getEmail()}</p>
+                <p><span class="has-text-weight-bold">Email:</span><a href="mailto:${manager.getEmail()}"> ${manager.getEmail()}</a></p>
                 <p><span class="has-text-weight-bold">Office Number:</span> ${manager.getOfficeNumber()}</p>
             </div>
         </div>
@@ -40,8 +40,8 @@ function generateEngineerCard(engineer) {
     
             <div class="content">
                 <p><span class="has-text-weight-bold">ID:</span> ${engineer.getID()}</p>
-                <p><span class="has-text-weight-bold">Email:</span> ${engineer.getEmail()}</p>
-                <p><span class="has-text-weight-bold">GitHub:</span><a href="https://github.com/${engineer.getGithub()}> ${engineer.getGithub()}</a></p>
+                <p><span class="has-text-weight-bold">Email:</span><a href="mailto:${engineer.getEmail()}"> ${engineer.getEmail()}</a></p>
+                <p><span class="has-text-weight-bold">GitHub:</span><a href="https://github.com/${engineer.getGithub()}"> ${engineer.getGithub()}</a></p>
             </div>
         </div>
     </div>
@@ -65,7 +65,7 @@ function generateInternCard(intern) {
     
             <div class="content">
                 <p><span class="has-text-weight-bold">ID:</span> ${intern.getID()}</p>
-                <p><span class="has-text-weight-bold">Email:</span> ${intern.getEmail()}</p>
+                <p><span class="has-text-weight-bold">Email:</span><a href="mailto:${intern.getEmail()}"> ${intern.getEmail()}</a></p>
                 <p><span class="has-text-weight-bold">School:</span> ${intern.getSchool()}</p>
             </div>
         </div>
